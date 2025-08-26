@@ -1,7 +1,7 @@
 # 📊 Shadow Insta Analysis
 
-This project analyzes Instagram activity using custom Python scripts.  
-It includes tag predictions, reel logging, category summarization, and visual insights.
+This project analyzes Instagram activity and builds an **end-to-end ML + visualization pipeline**.  
+It clusters your Instagram interactions, predicts future “vibes,” and produces **rich visual reports**.
 
 ---
 
@@ -9,53 +9,83 @@ It includes tag predictions, reel logging, category summarization, and visual in
 - `auto_suggest_tags.py` → Suggests relevant hashtags  
 - `build_reels_log.py` → Builds engagement log  
 - `multi_label_tagger.py` → Multi-label classification for tags  
-- `train_shadow_insta.py` → Model training  
-- `report_v2/figs/` → Graph outputs (36 visualizations)  
+- `train_shadow_insta.py` → Model training & evaluation  
+- `report_v2/figs/` → Graph outputs (36+ visualizations)  
 
 ---
 
 ## 📈 Analysis Graphs
 
-Here are the results of the analysis.  
+### 🔹 Core Trends
+| Category Histogram | Rows per Day | Category Share (Monthly) |
+|--------------------|--------------|---------------------------|
+| ![](report_v2/figs/01_category_hist.png) | ![](report_v2/figs/02_rows_per_day.png) | ![](report_v2/figs/03_category_share_month.png) |
 
-### 🔹 All Graphs
+| Activity Heatmap | Top Accounts | Top Hashtags |
+|------------------|--------------|--------------|
+| ![](report_v2/figs/04_activity_heatmap.png) | ![](report_v2/figs/05_top_accounts.png) | ![](report_v2/figs/06_top_hashtags.png) |
 
-![Graph1](report_v2/figs/graph1.png)
-![Graph2](report_v2/figs/graph2.png)
-![Graph3](report_v2/figs/graph3.png)
-![Graph4](report_v2/figs/graph4.png)
-![Graph5](report_v2/figs/graph5.png)
-![Graph6](report_v2/figs/graph6.png)
-![Graph7](report_v2/figs/graph7.png)
-![Graph8](report_v2/figs/graph8.png)
-![Graph9](report_v2/figs/graph9.png)
-![Graph10](report_v2/figs/graph10.png)
-![Graph11](report_v2/figs/graph11.png)
-![Graph12](report_v2/figs/graph12.png)
-![Graph13](report_v2/figs/graph13.png)
-![Graph14](report_v2/figs/graph14.png)
-![Graph15](report_v2/figs/graph15.png)
-![Graph16](report_v2/figs/graph16.png)
-![Graph17](report_v2/figs/graph17.png)
-![Graph18](report_v2/figs/graph18.png)
-![Graph19](report_v2/figs/graph19.png)
-![Graph20](report_v2/figs/graph20.png)
-![Graph21](report_v2/figs/graph21.png)
-![Graph22](report_v2/figs/graph22.png)
-![Graph23](report_v2/figs/graph23.png)
-![Graph24](report_v2/figs/graph24.png)
-![Graph25](report_v2/figs/graph25.png)
-![Graph26](report_v2/figs/graph26.png)
-![Graph27](report_v2/figs/graph27.png)
-![Graph28](report_v2/figs/graph28.png)
-![Graph29](report_v2/figs/graph29.png)
-![Graph30](report_v2/figs/graph30.png)
-![Graph31](report_v2/figs/graph31.png)
-![Graph32](report_v2/figs/graph32.png)
-![Graph33](report_v2/figs/graph33.png)
-![Graph34](report_v2/figs/graph34.png)
-![Graph35](report_v2/figs/graph35.png)
-![Graph36](report_v2/figs/graph36.png)
+---
+
+### 🔹 Sequence Dynamics
+| Markov Heatmap | Markov Rank Lines |
+|----------------|-------------------|
+| ![](report_v2/figs/07_markov_heatmap.png) | ![](report_v2/figs/07b_markov_ranklines.png) |
+
+---
+
+### 🔹 Tags & Categories
+| Tag Frequency | Tag–Category Heatmap | Tag Share Over Time |
+|---------------|----------------------|----------------------|
+| ![](report_v2/figs/14_tag_frequency.png) | ![](report_v2/figs/15_tag_category_heatmap.png) | ![](report_v2/figs/16_tag_share_time.png) |
+
+| Tag Co-Occurrence |
+|-------------------|
+| ![](report_v2/figs/16b_tag_cooccurrence.png) |
+
+---
+
+### 🔹 Accounts by Cluster
+| Cat 0 | Cat 1 | Cat 2 |
+|-------|-------|-------|
+| ![](report_v2/figs/acct_cat0.png) | ![](report_v2/figs/acct_cat1.png) | ![](report_v2/figs/acct_cat2.png) |
+
+| Cat 3 | Cat 4 | Cat 5 |
+|-------|-------|-------|
+| ![](report_v2/figs/acct_cat3.png) | ![](report_v2/figs/acct_cat4.png) | ![](report_v2/figs/acct_cat5.png) |
+
+---
+
+### 🔹 Feature Importance (Negative Correlations)
+| Cat 0 | Cat 1 | Cat 2 |
+|-------|-------|-------|
+| ![](report_v2/figs/feat_neg_cat0.png) | ![](report_v2/figs/feat_neg_cat1.png) | ![](report_v2/figs/feat_neg_cat2.png) |
+
+| Cat 3 | Cat 4 | Cat 5 |
+|-------|-------|-------|
+| ![](report_v2/figs/feat_neg_cat3.png) | ![](report_v2/figs/feat_neg_cat4.png) | ![](report_v2/figs/feat_neg_cat5.png) |
+
+---
+
+### 🔹 Feature Importance (Positive Correlations)
+| Cat 0 | Cat 1 | Cat 2 |
+|-------|-------|-------|
+| ![](report_v2/figs/feat_pos_cat0.png) | ![](report_v2/figs/feat_pos_cat1.png) | ![](report_v2/figs/feat_pos_cat2.png) |
+
+| Cat 3 | Cat 4 | Cat 5 |
+|-------|-------|-------|
+| ![](report_v2/figs/feat_pos_cat3.png) | ![](report_v2/figs/feat_pos_cat4.png) | ![](report_v2/figs/feat_pos_cat5.png) |
+
+---
+
+### 🔹 Hourly Activity by Category
+| Cat 0 | Cat 1 | Cat 2 |
+|-------|-------|-------|
+| ![](report_v2/figs/hour_cat0.png) | ![](report_v2/figs/hour_cat1.png) | ![](report_v2/figs/hour_cat2.png) |
+
+| Cat 3 | Cat 4 | Cat 5 |
+|-------|-------|-------|
+| ![](report_v2/figs/hour_cat3.png) | ![](report_v2/figs/hour_cat4.png) | ![](report_v2/figs/hour_cat5.png) |
 
 ---
 
@@ -68,5 +98,5 @@ git clone https://github.com/Kalyankaparaju/shadow-insta-analysis.git
 # Navigate inside
 cd shadow-insta-analysis
 
-# Run a script (example)
+# Run training (example)
 python train_shadow_insta.py
