@@ -1,0 +1,10 @@
+{
+  "samples_train": 26318,
+  "samples_test": 4645,
+  "n_categories": 6,
+  "horizon": 5,
+  "logreg_top1": 0.7356297093649085,
+  "logreg_top3": 0.8981700753498385,
+  "markov_top1": 0.9496232508073197,
+  "markov_top3": 0.9705059203444564
+}
