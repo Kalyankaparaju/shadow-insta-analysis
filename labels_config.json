@@ -1,0 +1,52 @@
+{
+  "cluster_to_tags": {
+    "0": ["misc"],
+    "1": ["memes", "tollywood"],
+    "2": ["film_promo", "tollywood"],
+    "3": ["satire", "trolls"],
+    "4": ["nri_relatable"],
+    "5": ["memes", "reposts"]
+  },
+
+  "account_to_tags": {
+    "filmyfocus": ["tollywood", "news"],
+    "fukkard": ["satire", "memes"],
+    "silly_fellows_": ["comedy_skits", "memes"],
+    "america_nri_la_frustration": ["nri_relatable", "memes"],
+    "shreyasgroup": ["film_promo", "tollywood"]
+  },
+
+  "hashtag_to_tags": {
+    "trailer": ["movies", "film_promo"],
+    "tollywood": ["tollywood"],
+    "meme": ["memes"],
+    "funny": ["memes", "humor"],
+    "emotional": ["emotion"],
+    "love": ["emotion"],
+    "news": ["news"],
+    "nri": ["nri_relatable"],
+    "reels": ["reels"]
+  },
+
+  "keyword_to_tags": {
+    "trailer": ["movies", "film_promo"],
+    "song": ["music"],
+    "teaser": ["film_promo"],
+    "review": ["reviews"],
+    "meme": ["memes"],
+    "funny": ["memes", "humor"],
+    "troll": ["trolls", "satire"],
+    "prank": ["prank"],
+    "heartwarming": ["emotion"],
+    "sad": ["emotion"],
+    "news": ["news"]
+  },
+
+  "regex_to_tags": [
+    { "pattern": "\\b(?:movie|film|cinema|tollywood)\\b", "tags": ["movies"] },
+    { "pattern": "\\b(?:meme|memes)\\b", "tags": ["memes"] },
+    { "pattern": "\\b(?:nri|desi abroad)\\b", "tags": ["nri_relatable"] }
+  ],
+
+  "max_tags_per_post": 8
+}

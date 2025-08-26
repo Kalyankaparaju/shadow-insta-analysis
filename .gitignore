@@ -1,31 +1,30 @@
-# python
+# Python
 __pycache__/
 *.pyc
-*.pyo
-*.pyd
 .venv/
 venv/
 env/
 *.egg-info/
 
-# notebooks/outputs
-.ipynb_checkpoints/
-*.log
-
-# data & models (keep these local)
+# Data, models & outputs (keep these local)
 data/
 *.csv
+*.tsv
 *.parquet
 *.pkl
 *.joblib
 *.model
 *.bin
+*.log
 
-# reports cache
+# Reports
 report*/figs/
 *.png
 *.pdf
 
-# OS
+# Notebooks cache
+.ipynb_checkpoints/
+
+# OS cruft
 .DS_Store
 Thumbs.db
